@@ -1,0 +1,6 @@
+framework module Pods_CatsGalleryTests {
+  umbrella header "Pods-CatsGalleryTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
