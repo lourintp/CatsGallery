@@ -10,7 +10,6 @@
 		252769BE3C3DB384015FD385 /* Pods_CatsGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9981F3ABABB7AA1F27AF3EF8 /* Pods_CatsGallery.framework */; };
 		2C0617B224197EEB00B7B30E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0617B124197EEB00B7B30E /* AppDelegate.swift */; };
 		2C0617B424197EEB00B7B30E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0617B324197EEB00B7B30E /* SceneDelegate.swift */; };
-		2C0617B624197EEB00B7B30E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0617B524197EEB00B7B30E /* ViewController.swift */; };
 		2C0617B924197EEB00B7B30E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0617B724197EEB00B7B30E /* Main.storyboard */; };
 		2C0617BB24197EEC00B7B30E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0617BA24197EEC00B7B30E /* Assets.xcassets */; };
 		2C0617BE24197EEC00B7B30E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0617BC24197EEC00B7B30E /* LaunchScreen.storyboard */; };
@@ -23,6 +22,7 @@
 		2C492A73241AC38C00CEAD04 /* GallerySearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C492A72241AC38C00CEAD04 /* GallerySearchRequest.swift */; };
 		2C492A77241AC3DA00CEAD04 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C492A76241AC3DA00CEAD04 /* Gallery.swift */; };
 		2C492A79241AC4AE00CEAD04 /* GalleryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C492A78241AC4AE00CEAD04 /* GalleryData.swift */; };
+		2C492A7B241ACA9100CEAD04 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C492A7A241ACA9100CEAD04 /* MainCollectionViewController.swift */; };
 		2F2A3B35F7E65604D34D5DD1 /* Pods_CatsGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85DFB1F73AFC8B153BD3521 /* Pods_CatsGalleryTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,6 @@
 		2C0617AE24197EEB00B7B30E /* CatsGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0617B124197EEB00B7B30E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C0617B324197EEB00B7B30E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2C0617B524197EEB00B7B30E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C0617B824197EEB00B7B30E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C0617BA24197EEC00B7B30E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C0617BD24197EEC00B7B30E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		2C492A72241AC38C00CEAD04 /* GallerySearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySearchRequest.swift; sourceTree = "<group>"; };
 		2C492A76241AC3DA00CEAD04 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
 		2C492A78241AC4AE00CEAD04 /* GalleryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryData.swift; sourceTree = "<group>"; };
+		2C492A7A241ACA9100CEAD04 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		4E59944862C8971B3E929BCC /* Pods-CatsGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsGallery.release.xcconfig"; path = "Target Support Files/Pods-CatsGallery/Pods-CatsGallery.release.xcconfig"; sourceTree = "<group>"; };
 		505E0E6841609066BBC0A49F /* Pods-CatsGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsGallery.debug.xcconfig"; path = "Target Support Files/Pods-CatsGallery/Pods-CatsGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		6A9946D55ED0B29492C7A334 /* Pods-CatsGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsGalleryTests.release.xcconfig"; path = "Target Support Files/Pods-CatsGalleryTests/Pods-CatsGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -111,11 +111,11 @@
 				2C0617D324197FB000B7B30E /* APIClient */,
 				2C0617B124197EEB00B7B30E /* AppDelegate.swift */,
 				2C0617B324197EEB00B7B30E /* SceneDelegate.swift */,
-				2C0617B524197EEB00B7B30E /* ViewController.swift */,
 				2C0617B724197EEB00B7B30E /* Main.storyboard */,
 				2C0617BA24197EEC00B7B30E /* Assets.xcassets */,
 				2C0617BC24197EEC00B7B30E /* LaunchScreen.storyboard */,
 				2C0617BF24197EEC00B7B30E /* Info.plist */,
+				2C492A7A241ACA9100CEAD04 /* MainCollectionViewController.swift */,
 			);
 			path = CatsGallery;
 			sourceTree = "<group>";
@@ -355,12 +355,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C0617B624197EEB00B7B30E /* ViewController.swift in Sources */,
 				2C492A73241AC38C00CEAD04 /* GallerySearchRequest.swift in Sources */,
 				2C492A79241AC4AE00CEAD04 /* GalleryData.swift in Sources */,
 				2C0617D72419804500B7B30E /* DataContainer.swift in Sources */,
 				2C0617B224197EEB00B7B30E /* AppDelegate.swift in Sources */,
 				2C492A71241AB52300CEAD04 /* APIClient.swift in Sources */,
+				2C492A7B241ACA9100CEAD04 /* MainCollectionViewController.swift in Sources */,
 				2C0617D524197FD500B7B30E /* APIRequest.swift in Sources */,
 				2C492A77241AC3DA00CEAD04 /* Gallery.swift in Sources */,
 				2C0617DB2419816B00B7B30E /* Result.swift in Sources */,
