@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,14 @@
 		2C0617BB24197EEC00B7B30E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C0617BA24197EEC00B7B30E /* Assets.xcassets */; };
 		2C0617BE24197EEC00B7B30E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C0617BC24197EEC00B7B30E /* LaunchScreen.storyboard */; };
 		2C0617C924197EEC00B7B30E /* CatsGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0617C824197EEC00B7B30E /* CatsGalleryTests.swift */; };
+		2C0617D524197FD500B7B30E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0617D424197FD500B7B30E /* APIRequest.swift */; };
+		2C0617D72419804500B7B30E /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0617D62419804500B7B30E /* DataContainer.swift */; };
+		2C0617D92419815100B7B30E /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0617D82419815100B7B30E /* APIResponse.swift */; };
+		2C0617DB2419816B00B7B30E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0617DA2419816B00B7B30E /* Result.swift */; };
+		2C492A71241AB52300CEAD04 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C492A70241AB52300CEAD04 /* APIClient.swift */; };
+		2C492A73241AC38C00CEAD04 /* GallerySearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C492A72241AC38C00CEAD04 /* GallerySearchRequest.swift */; };
+		2C492A77241AC3DA00CEAD04 /* Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C492A76241AC3DA00CEAD04 /* Gallery.swift */; };
+		2C492A79241AC4AE00CEAD04 /* GalleryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C492A78241AC4AE00CEAD04 /* GalleryData.swift */; };
 		2F2A3B35F7E65604D34D5DD1 /* Pods_CatsGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85DFB1F73AFC8B153BD3521 /* Pods_CatsGalleryTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +48,14 @@
 		2C0617C424197EEC00B7B30E /* CatsGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C0617C824197EEC00B7B30E /* CatsGalleryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsGalleryTests.swift; sourceTree = "<group>"; };
 		2C0617CA24197EEC00B7B30E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C0617D424197FD500B7B30E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		2C0617D62419804500B7B30E /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		2C0617D82419815100B7B30E /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		2C0617DA2419816B00B7B30E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2C492A70241AB52300CEAD04 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		2C492A72241AC38C00CEAD04 /* GallerySearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GallerySearchRequest.swift; sourceTree = "<group>"; };
+		2C492A76241AC3DA00CEAD04 /* Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gallery.swift; sourceTree = "<group>"; };
+		2C492A78241AC4AE00CEAD04 /* GalleryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryData.swift; sourceTree = "<group>"; };
 		4E59944862C8971B3E929BCC /* Pods-CatsGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsGallery.release.xcconfig"; path = "Target Support Files/Pods-CatsGallery/Pods-CatsGallery.release.xcconfig"; sourceTree = "<group>"; };
 		505E0E6841609066BBC0A49F /* Pods-CatsGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsGallery.debug.xcconfig"; path = "Target Support Files/Pods-CatsGallery/Pods-CatsGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		6A9946D55ED0B29492C7A334 /* Pods-CatsGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatsGalleryTests.release.xcconfig"; path = "Target Support Files/Pods-CatsGalleryTests/Pods-CatsGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +107,8 @@
 		2C0617B024197EEB00B7B30E /* CatsGallery */ = {
 			isa = PBXGroup;
 			children = (
+				2C492A6F241AB4F900CEAD04 /* Domain */,
+				2C0617D324197FB000B7B30E /* APIClient */,
 				2C0617B124197EEB00B7B30E /* AppDelegate.swift */,
 				2C0617B324197EEB00B7B30E /* SceneDelegate.swift */,
 				2C0617B524197EEB00B7B30E /* ViewController.swift */,
@@ -111,6 +129,44 @@
 			path = CatsGalleryTests;
 			sourceTree = "<group>";
 		};
+		2C0617D324197FB000B7B30E /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				2C0617D424197FD500B7B30E /* APIRequest.swift */,
+				2C0617D62419804500B7B30E /* DataContainer.swift */,
+				2C0617D82419815100B7B30E /* APIResponse.swift */,
+				2C0617DA2419816B00B7B30E /* Result.swift */,
+				2C492A70241AB52300CEAD04 /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		2C492A6F241AB4F900CEAD04 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2C492A75241AC3AE00CEAD04 /* Response */,
+				2C492A74241AC3A900CEAD04 /* Request */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2C492A74241AC3A900CEAD04 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				2C492A72241AC38C00CEAD04 /* GallerySearchRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		2C492A75241AC3AE00CEAD04 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				2C492A76241AC3DA00CEAD04 /* Gallery.swift */,
+				2C492A78241AC4AE00CEAD04 /* GalleryData.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
 		75D2D34AECE77CB716463E15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +184,6 @@
 				BDDAD01CC7D3DF264A6FF5C6 /* Pods-CatsGalleryTests.debug.xcconfig */,
 				6A9946D55ED0B29492C7A334 /* Pods-CatsGalleryTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -301,8 +356,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C0617B624197EEB00B7B30E /* ViewController.swift in Sources */,
+				2C492A73241AC38C00CEAD04 /* GallerySearchRequest.swift in Sources */,
+				2C492A79241AC4AE00CEAD04 /* GalleryData.swift in Sources */,
+				2C0617D72419804500B7B30E /* DataContainer.swift in Sources */,
 				2C0617B224197EEB00B7B30E /* AppDelegate.swift in Sources */,
+				2C492A71241AB52300CEAD04 /* APIClient.swift in Sources */,
+				2C0617D524197FD500B7B30E /* APIRequest.swift in Sources */,
+				2C492A77241AC3DA00CEAD04 /* Gallery.swift in Sources */,
+				2C0617DB2419816B00B7B30E /* Result.swift in Sources */,
 				2C0617B424197EEB00B7B30E /* SceneDelegate.swift in Sources */,
+				2C0617D92419815100B7B30E /* APIResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
