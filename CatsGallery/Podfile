@@ -7,6 +7,7 @@ target 'CatsGallery' do
 
   # Pods for CatsGallery
   pod 'Alamofire'
+  pod 'AlamofireImage'
 
   target 'CatsGalleryTests' do
     inherit! :search_paths

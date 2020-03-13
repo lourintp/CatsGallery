@@ -8,27 +8,34 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class MainCollectionViewController: UICollectionViewController {
 
-    private let reuseIdentifier = "photoCell"
+    private let reuseIdentifier = "photoCell"    
     private let itemsPerRow: CGFloat = 3
     private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
     private var gallery: [GalleryData] = []
+    let photoManager = PhotoManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
+        let presenter = CollectionPresenter()
+        presenter.delegate = self
+        presenter.getImages()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.collectionView!.register(GalleryCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return gallery.count
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GalleryCollectionViewCell
+        
+        cell.configure(with: gallery[indexPath.row].link, photosManager: photoManager)
         
         return cell
     }
@@ -52,4 +59,18 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
     }
+}
+
+extension MainCollectionViewController: CollectionDelegate {
+    
+    func refreshGallery(data: [GalleryData]) {
+        self.gallery = data
+        self.collectionView.reloadData()
+    }
+    
+    func showErrorAlert(error: String) {
+        print(error)
+    }
+    
+    
 }

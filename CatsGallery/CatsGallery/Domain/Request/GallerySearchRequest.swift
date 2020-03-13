@@ -17,7 +17,7 @@ struct GallerySearchRequest: APIRequest {
     }
     
     var resourcePath: String {
-        return "/gallery/search/?q=\(filter)"
+        return "/3/gallery/search/?q=\(filter)"
     }
     typealias Response = Gallery
     

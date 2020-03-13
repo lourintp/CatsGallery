@@ -19,7 +19,7 @@ public class APIClient: APIClientProtocol {
         let endpoint: URLRequest
         
         do {
-            endpoint = try getRequest(for: request, url: "")
+            endpoint = try getRequest(for: request, url: "https://api.imgur.com")
         } catch let error{
             completion(.failure(error.localizedDescription))
             return
@@ -60,7 +60,7 @@ public class APIClient: APIClientProtocol {
     }
     
     fileprivate func getHeader(_ requestData: inout URLRequest) {
-        requestData.addValue("Client-ID", forHTTPHeaderField: "Authorization")
+        requestData.addValue("Client-ID 1ceddedc03a5d71", forHTTPHeaderField: "Authorization")
     }
     
 }

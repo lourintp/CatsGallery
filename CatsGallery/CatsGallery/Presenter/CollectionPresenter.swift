@@ -15,20 +15,20 @@ protocol CollectionDelegate {
 
 class CollectionPresenter {
     
-    private var delegate: CollectionDelegate?
+    var delegate: CollectionDelegate?
     
     init() {}
     
     func getImages() {
         let service = GalleryService()
-        service.getCatsGallery { [weak self] (gallery, error) in
+        service.getCatsGallery { (gallery, error) in
             if let err = error {
-                self?.delegate?.showErrorAlert(error: err)
+                self.delegate?.showErrorAlert(error: err)
                 return
             }
             
             if let gallery = gallery, !gallery.data.isEmpty {
-                self?.delegate?.refreshGallery(data: gallery.data)
+                self.delegate?.refreshGallery(data: gallery.data)
                 return
             }
         }
