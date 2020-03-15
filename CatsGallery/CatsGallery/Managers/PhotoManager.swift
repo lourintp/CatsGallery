@@ -25,7 +25,10 @@ class PhotoManager {
     
     func retrieveImage(for url: String, completion: @escaping (UIImage) -> Void) -> Request {
         return Alamofire.request(url, method: .get).responseImage { response in
-            guard let image = response.result.value else { return }
+            guard let image = response.result.value else {
+                completion(UIImage(named: "placeholderCat")!)
+                return                
+            }
             completion(image)
             self.cache(image, for: url)
         }

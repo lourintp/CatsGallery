@@ -13,5 +13,6 @@ struct GalleryData: APIResponse {
     let title: String
     let datetime: CLong
     let link: String
+    let images: [ImageResponse]?
     
 }

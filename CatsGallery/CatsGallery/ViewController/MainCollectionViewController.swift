@@ -33,10 +33,12 @@ class MainCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GalleryCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GalleryCollectionViewCell                
         
-        cell.configure(with: gallery[indexPath.row].link, photosManager: photoManager)
-        
+        if let list = gallery[indexPath.row].images, let link = list.first?.link {
+            cell.configure(with: link, photosManager: photoManager)
+        }
+                
         return cell
     }
 

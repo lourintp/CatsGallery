@@ -60,7 +60,7 @@ public class APIClient: APIClientProtocol {
     }
     
     fileprivate func getHeader(_ requestData: inout URLRequest) {
-        requestData.addValue("Client-ID 1ceddedc03a5d71", forHTTPHeaderField: "Authorization")
+        requestData.addValue(API_KEY, forHTTPHeaderField: "Authorization")
     }
     
 }

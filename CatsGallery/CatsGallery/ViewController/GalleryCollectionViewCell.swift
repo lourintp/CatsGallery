@@ -12,6 +12,7 @@ import Alamofire
 class GalleryCollectionViewCell: UICollectionViewCell {
     
     var imageView: UIImageView?
+    var progressIndicator: UIActivityIndicatorView?
     weak var photosManager: PhotoManager?
     var request: Request?
     var photoUrl: String!
@@ -19,17 +20,30 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        setupImageView()
+        setupProgress()
+    }
+    
+    private func setupImageView() {
         imageView = UIImageView(frame: self.bounds)
-        imageView?.contentMode = .scaleAspectFit
-        imageView?.backgroundColor = .red
+        imageView?.contentMode = .scaleAspectFill
+        imageView?.clipsToBounds = true
+        imageView?.layer.cornerRadius = 22
+        imageView?.backgroundColor = .black
         
         contentView.addSubview(imageView!)
         
-        imageView?.translatesAutoresizingMaskIntoConstraints = false
         imageView?.rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
         imageView?.leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
         imageView?.topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
         imageView?.bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+    }
+    
+    private func setupProgress() {
+        progressIndicator = UIActivityIndicatorView(frame: bounds)
+        progressIndicator?.hidesWhenStopped = true
+        
+        contentView.addSubview(progressIndicator!)
     }
         
     required init?(coder aDecoder: NSCoder) {
@@ -63,16 +77,14 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     }
 
     func downloadImage() {
-        //loadingIndicator.startAnimating()
+        progressIndicator?.startAnimating()
         request = photosManager?.retrieveImage(for: photoUrl) { image in
             self.populate(with: image)
         }
     }
 
     func populate(with image: UIImage) {
-        //loadingIndicator.stopAnimating()
+        progressIndicator?.stopAnimating()
         imageView?.image = image
-        //captionLabel.text = photo.name
-        //captionLabel.isHidden = false
     }
 }
